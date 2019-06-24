@@ -16,7 +16,7 @@ export class Bcrypt implements Hash {
   }
 
   /**
-   * Hash plain value using argon2.
+   * Hash a plain value using argon2.
    */
   make(value: string, config?: BcryptConfig): Promise<string> {
     const rounds = config ? config.rounds : this.$config.rounds || 10

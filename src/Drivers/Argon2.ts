@@ -16,7 +16,7 @@ export class Argon2 implements Hash {
   }
 
   /**
-   * Hash plain value using argon2.
+   * Hash a plain value using argon2.
    */
   make(value: string, config?: Argon2Config): Promise<string> {
     // @ts-ignore
