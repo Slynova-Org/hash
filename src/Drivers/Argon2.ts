@@ -5,7 +5,7 @@
  * @copyright Slynova - Romain Lanz <romain.lanz@slynova.ch>
  */
 
-import argon2 from 'argon2'
+import argon2, { Options } from 'argon2'
 import Hash from '../Hash'
 
 export class Argon2 implements Hash {
@@ -35,11 +35,4 @@ export class Argon2 implements Hash {
   }
 }
 
-export type Argon2Config = {
-  type: number
-  memoryCost?: number
-  hashLength?: number
-  timeCost?: number
-  parallelism?: number
-  raw?: boolean
-}
+export interface Argon2Config extends Options {}

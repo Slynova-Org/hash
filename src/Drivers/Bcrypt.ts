@@ -44,6 +44,6 @@ export class Bcrypt implements Hash {
   }
 }
 
-export type BcryptConfig = {
+export interface BcryptConfig {
   rounds: number
 }
