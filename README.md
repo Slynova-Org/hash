@@ -30,7 +30,7 @@ When you require the package in your file, it will give you access to the `HashM
 This class is a facade for the package and should be instantiated with a [configuration object](https://github.com/Slynova-Org/hash/blob/master/test/stubs/config.ts).
 
 ```javascript
-const { HashManager } = require('@slynova/HashManager')
+const { HashManager } = require('@slynova/hash')
 const hash = new HashManager(config)
 ```
 
