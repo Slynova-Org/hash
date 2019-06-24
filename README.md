@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/2793951/54391096-418f4500-46a4-11e9-8d0c-b00ff7ba4198.png" alt="flydrive">
-</p>
+# Hash
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@slynova/hash"><img src="https://img.shields.io/npm/dm/@slynova/hash.svg?style=flat-square" alt="Download"></a>
