@@ -68,7 +68,7 @@ await hash.use('bcrypt').make('foo')
 This method will verify an existing hash with the plain value using the provided driver.
 
 ```javascript
-await hash.use('bcrypt').verify('$2b$10$RFgHztUoooIJEhuR4/e3ue4lZg36HYcIY2D7ptjB494FI/ctohaa6', 'foo')
+await hash.use('bcrypt').verify('foo', '$2b$10$RFgHztUoooIJEhuR4/e3ue4lZg36HYcIY2D7ptjB494FI/ctohaa6')
 ```
 
 </details>
