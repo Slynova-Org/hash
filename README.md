@@ -1,4 +1,6 @@
-# Hash
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/2793951/60084566-0f2bc400-9738-11e9-909e-7b471a000419.png" alt="hash">
+</p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@slynova/hash"><img src="https://img.shields.io/npm/dm/@slynova/hash.svg?style=flat-square" alt="Download"></a>
