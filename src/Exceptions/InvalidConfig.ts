@@ -8,11 +8,11 @@
 import { RuntimeException } from 'node-exceptions'
 
 export class InvalidConfig extends RuntimeException {
-  public static missingDriverName() {
+  public static missingDriverName () {
     return new this('Make sure to define a default hash driver name inside config file', 500, 'E_INVALID_CONFIG')
   }
 
-  public static missingDriverConfig(name: string) {
+  public static missingDriverConfig (name: string) {
     return new this(`Make sure to define config for ${name} hash driver`, 500, 'E_INVALID_CONFIG')
   }
 }
