@@ -12,10 +12,10 @@ export default interface Hash {
   /**
    * Hash a plain value using argon2.
    */
-  make(value: string, config?: Argon2Config | BcryptConfig): Promise<string>
+  make (value: string, config?: Argon2Config | BcryptConfig): Promise<string>
 
   /**
    * Verify an existing hash with the plain value.
    */
-  verify(value: string, hash: string): Promise<boolean>
+  verify (value: string, hash: string): Promise<boolean>
 }

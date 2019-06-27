@@ -17,11 +17,11 @@ export default class HashManager {
    */
   private _config: any
 
-  constructor(config) {
+  constructor (config) {
     this._config = config
   }
 
-  use<T extends Hash>(name?: string, config?: Argon2Config | BcryptConfig): T {
+  public use<T extends Hash> (name?: string, config?: Argon2Config | BcryptConfig): T {
     name = name || this._config.default
 
     /**

@@ -5,7 +5,7 @@
  * @copyright Slynova - Romain Lanz <romain.lanz@slynova.ch>
  */
 
-import test from 'japa'
+import * as test from 'japa'
 import { Bcrypt } from '../../src/Drivers/Bcrypt'
 
 test.group('Bcrypt Driver', () => {

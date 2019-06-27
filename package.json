@@ -2,18 +2,26 @@
   "name": "@slynova/hash",
   "version": "0.1.0",
   "description": "Flexible and Fluent framework-agnostic driver based system for password hashing algorithms.",
-  "main": "./build/index.js",
+  "main": "build/index.js",
+  "files": [
+    "build/src",
+    "build/index.d.ts",
+    "build/index.js"
+  ],
   "author": "Romain Lanz <romain.lanz@slynova.ch>",
   "license": "MIT",
-  "files": [
-    "build"
-  ],
   "scripts": {
-    "build": "npm run clean && npm run tsc",
-    "clean": "rimraf build",
-    "prepublishOnly": "npm run build",
-    "test": "node japaFile",
-    "tsc": "tsc"
+    "build": "npm run compile",
+    "clean": "del build",
+    "pretest": "npm run lint",
+    "test": "node japaFile.js",
+    "tsc": "tsc",
+    "mrm": "mrm --preset=@adonisjs/mrm-preset",
+    "lint": "tslint --project tsconfig.json",
+    "compile": "npm run lint && npm run clean && tsc",
+    "commit": "git-cz",
+    "release": "np",
+    "version": "npm run build"
   },
   "dependencies": {
     "argon2": "^0.24.0",
@@ -21,16 +29,24 @@
     "node-exceptions": "^4.0.1"
   },
   "devDependencies": {
+    "@adonisjs/mrm-preset": "^2.0.3",
     "@types/argon2": "^0.15.0",
     "@types/bcrypt": "^3.0.0",
     "@types/node": "^12.0.10",
     "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "commitizen": "^3.1.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "del-cli": "^2.0.0",
     "eslint": "^6.0.0",
     "eslint-config-prettier": "^6.0.0",
+    "husky": "^2.4.1",
     "japa": "^2.0.10",
+    "mrm": "^1.2.2",
+    "np": "^5.0.3",
     "prettier": "^1.18.2",
-    "rimraf": "^2.6.3",
     "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "tslint-eslint-rules": "^5.4.0",
     "typescript": "^3.5.2"
   },
   "repository": "git@github.com:Slynova-Org/hash.git",
@@ -53,5 +69,27 @@
     "singleQuote": true,
     "trailingComma": "es5",
     "printWidth": 120
+  },
+  "nyc": {
+    "exclude": [
+      "test"
+    ],
+    "extension": [
+      ".ts"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "node ./node_modules/@adonisjs/mrm-preset/validateCommit/conventional/validate.js"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "np": {
+    "contents": ".",
+    "anyBranch": false
   }
 }

@@ -5,7 +5,7 @@
  * @copyright Slynova - Romain Lanz <romain.lanz@slynova.ch>
  */
 
-import test from 'japa'
+import * as test from 'japa'
 import { Argon2 } from '../../src/Drivers/Argon2'
 
 test.group('Argon2 Driver', () => {
